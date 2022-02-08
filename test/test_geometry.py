@@ -1,3 +1,5 @@
+# pylint: disable=missing-module-docstring
+# pylint: disable=missing-function-docstring, missing-class-docstring
 import unittest
 
 
@@ -14,7 +16,6 @@ class DistanceTest(unittest.TestCase):
             initial_velocity=np.array([0, 0, 0]))
         body2 = Body(mass=1, initial_position=np.array([1, 0, 0]),
             initial_velocity=np.array([0, 0, 0]))
-    
         self.assertEqual(distance(body1, body2), 1.0)
 
 
@@ -23,7 +24,6 @@ class DistanceTest(unittest.TestCase):
             initial_velocity=np.array([0, 0, 0]))
         body2 = Body(mass=1, initial_position=np.array([1, 2, 0]),
             initial_velocity=np.array([0, 0, 0]))
-    
         self.assertEqual(distance(body1, body2), 2.0)
 
 
@@ -32,7 +32,6 @@ class DistanceTest(unittest.TestCase):
             initial_velocity=np.array([0, 0, 0]))
         body2 = Body(mass=1, initial_position=np.array([1, 2, 3]),
             initial_velocity=np.array([0, 0, 0]))
-    
         self.assertEqual(distance(body1, body2), 3.0)
 
 
@@ -41,7 +40,6 @@ class DistanceTest(unittest.TestCase):
             initial_velocity=np.array([0, 0, 0]))
         body2 = Body(mass=1, initial_position=np.array([3, 4, 0]),
             initial_velocity=np.array([0, 0, 0]))
-    
         self.assertEqual(distance(body1, body2), 5.0)
 
 
@@ -50,5 +48,4 @@ class DistanceTest(unittest.TestCase):
             initial_velocity=np.array([0, 0, 0]))
         body2 = Body(mass=1, initial_position=np.array([0, 5, 12]),
             initial_velocity=np.array([0, 0, 0]))
-    
         self.assertEqual(distance(body1, body2), 13.0)
