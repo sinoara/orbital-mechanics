@@ -33,4 +33,4 @@ class DistanceTest(unittest.TestCase):
             initial_velocity=np.array([0, 0, 0]))
         body2 = Body(mass=5, initial_position=np.array([3, 1, 4]),
             initial_velocity=np.array([0, 0, 0]))
-        self.assertEqual(gravity_force(body1, body2), g_const)
+        self.assertEqual(gravity_force(body1, body2), g_const/5)
