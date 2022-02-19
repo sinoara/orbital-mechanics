@@ -25,6 +25,6 @@ class Body:
     initial_position: npt.NDArray[np.float64]
     initial_velocity: npt.NDArray[np.float64]
 
-    def __post_init__(self):
+    def __post_init__(self) -> None:
         self.current_position : npt.NDArray[np.float64] = self.initial_position
         self.current_velocity : npt.NDArray[np.float64] = self.initial_velocity
